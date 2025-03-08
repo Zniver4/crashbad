@@ -7,7 +7,7 @@ public class Vidas : MonoBehaviour
     public int playerLives = 3;
     public TextMeshProUGUI livesText;
     public GameObject[] balls; // Array de pelotas
-    public Rigidbody playerRigidbody; // Referencia al Rigidbody del jugador
+    public GameObject player; // Referencia al GameObject del jugador
 
     private void Start()
     {
@@ -29,7 +29,7 @@ public class Vidas : MonoBehaviour
                     {
                         // Manejar el fin del juego para este jugador
                         playerLives = 0; // Asegurarse de que no baje de 0
-                        FreezePlayer();
+                        HidePlayer();
                     }
                 }
                 break; // Salir del bucle una vez que se encuentra la pelota
@@ -42,9 +42,9 @@ public class Vidas : MonoBehaviour
         livesText.text = "" + playerLives;
     }
 
-    private void FreezePlayer()
+    private void HidePlayer()
     {
-        // Congelar al jugador
-        playerRigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        // Desactivar el GameObject del jugador
+        player.SetActive(false);
     }
 }

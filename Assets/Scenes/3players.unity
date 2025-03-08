@@ -246,7 +246,7 @@ MonoBehaviour:
   maxYLimit: 10
   minXLimit: -14
   maxXLimit: 15
-  minZLimit: -20
+  minZLimit: -65
   maxZLimit: 10
   initialSpeed: 5
   minSpeedThreshold: 0.1
@@ -1064,7 +1064,7 @@ MonoBehaviour:
   - {fileID: 9192374791686139719}
   - {fileID: 2676334348671977268}
   - {fileID: 2956572455800069945}
-  playerRigidbody: {fileID: 1669077689}
+  player: {fileID: 1669077682}
 --- !u!1 &571829129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 130964, guid: c644a2181ac22e740968a7ece97e8f36, type: 3}
@@ -1131,7 +1131,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!4 &571829138 stripped
 Transform:
@@ -1214,7 +1214,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1001 &611777935
 PrefabInstance:
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   - {fileID: 9192374791686139719}
   - {fileID: 2676334348671977268}
   - {fileID: 2956572455800069945}
-  playerRigidbody: {fileID: 1489651034}
+  player: {fileID: 1489651024}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,7 +3070,7 @@ MonoBehaviour:
   - {fileID: 9192374791686139719}
   - {fileID: 2676334348671977268}
   - {fileID: 2956572455800069945}
-  playerRigidbody: {fileID: 600096716}
+  player: {fileID: 600096709}
 --- !u!1 &1408517897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,7 +3385,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &1554516862
 GameObject:
@@ -3636,8 +3636,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.3625457, y: 4.8316374, z: 4.3009276}
-  m_Center: {x: -0.15248692, y: 1.4798799, z: -0.027102709}
+  m_Size: {x: 3.3625457, y: 3.0528617, z: 4.3009276}
+  m_Center: {x: -0.15248692, y: 1.4855855, z: -0.027102709}
 --- !u!4 &1669077688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 425328, guid: aeb4794909bc89d43b72ad784903e0f5, type: 3}
@@ -3668,7 +3668,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 36
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &1699616985
 GameObject:
@@ -4286,7 +4286,7 @@ MonoBehaviour:
   - {fileID: 9192374791686139719}
   - {fileID: 2676334348671977268}
   - {fileID: 2956572455800069945}
-  playerRigidbody: {fileID: 571829136}
+  player: {fileID: 571829129}
 --- !u!65 &1949943111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4400,6 +4400,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8562876868974639235, guid: df90e34bb62a01540a29ca021c1d6210, type: 3}
+      propertyPath: minZLimit
+      value: -65
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4421,6 +4425,10 @@ PrefabInstance:
     - target: {fileID: 554625567089891520, guid: fe060f93b9abbd74e887f13544189ca9, type: 3}
       propertyPath: m_Name
       value: Pelota (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026878523373564429, guid: fe060f93b9abbd74e887f13544189ca9, type: 3}
+      propertyPath: minZLimit
+      value: -65
       objectReference: {fileID: 0}
     - target: {fileID: 5943012692239877350, guid: fe060f93b9abbd74e887f13544189ca9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4600,6 +4608,18 @@ PrefabInstance:
     - target: {fileID: 964660071326935244, guid: 36ecd7afa795cce438a3b95cca74d682, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027508908494821017, guid: 36ecd7afa795cce438a3b95cca74d682, type: 3}
+      propertyPath: maxYLimit
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027508908494821017, guid: 36ecd7afa795cce438a3b95cca74d682, type: 3}
+      propertyPath: minYLimit
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027508908494821017, guid: 36ecd7afa795cce438a3b95cca74d682, type: 3}
+      propertyPath: minZLimit
+      value: -65
       objectReference: {fileID: 0}
     - target: {fileID: 4027508908494821017, guid: 36ecd7afa795cce438a3b95cca74d682, type: 3}
       propertyPath: originPosition.x
