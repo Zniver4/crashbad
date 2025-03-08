@@ -12,6 +12,8 @@ public class Ball : MonoBehaviour
     public float maxXLimit = 10f;
     public float minZLimit = -10f;
     public float maxZLimit = 10f;
+    public float initialSpeed = 5f; // Nueva variable para la velocidad inicial
+    public float minSpeedThreshold = 0.1f; // Umbral mínimo de velocidad
 
     private Rigidbody rb;
     private Collider ballCollider;
@@ -32,6 +34,9 @@ public class Ball : MonoBehaviour
         noBounceMaterial.bounciness = 0f;
         noBounceMaterial.bounceCombine = PhysicMaterialCombine.Minimum;
         ballCollider.material = noBounceMaterial;
+
+        // Aplica una velocidad inicial
+        rb.velocity = new Vector3(initialSpeed, 0, initialSpeed);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -58,6 +63,18 @@ public class Ball : MonoBehaviour
             // Resetea la pelota a su posición de origen
             transform.position = originPosition;
             rb.velocity = Vector3.zero; // Detén cualquier movimiento actual
+        }
+
+        // Verifica si la velocidad de la pelota es muy baja
+        if (rb.velocity.magnitude < minSpeedThreshold)
+        {
+            // Aplica una fuerza adicional para mantener la pelota en movimiento
+            Vector3 additionalForce = new Vector3(
+                Random.Range(-forceMagnitude, forceMagnitude),
+                Random.Range(-forceMagnitude, forceMagnitude),
+                Random.Range(-forceMagnitude, forceMagnitude)
+            );
+            rb.AddForce(additionalForce, ForceMode.Impulse);
         }
     }
 }
