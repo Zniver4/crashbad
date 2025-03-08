@@ -10,7 +10,6 @@ public class moveZ : MonoBehaviour
 
     private void Update()
     {
-        // Obtener el input de las teclas "W" y "S"
         float moveInput = Input.GetAxis("Vertical");
 
         // Calcular el movimiento en el eje Z

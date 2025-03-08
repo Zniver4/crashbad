@@ -15,7 +15,7 @@ public class moveX1 : MonoBehaviour
         // Nueva posición con el movimiento aplicado
         float nuevaPosicionX = transform.position.x + movimiento;
 
-        // Asegúrate de que la nueva posición esté dentro de los límites
+        // Asegúra de que la nueva posición esté dentro de los límites
         nuevaPosicionX = Mathf.Clamp(nuevaPosicionX, limiteIzquierdo, limiteDerecho);
 
         // Aplica la nueva posición

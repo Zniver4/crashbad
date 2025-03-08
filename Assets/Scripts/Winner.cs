@@ -11,8 +11,8 @@ public class Winner : MonoBehaviour
 
     private void Start()
     {
-        gameOverCanvas.SetActive(false); // Asegúrate de que el Canvas esté desactivado al inicio
-        Time.timeScale = 1; // Asegúrate de que el tiempo esté corriendo al inicio
+        gameOverCanvas.SetActive(false); // Asegúra de que el Canvas esté desactivado al inicio
+        Time.timeScale = 1; // Asegúra de que el tiempo esté corriendo al inicio
     }
 
     private void Update()
@@ -39,7 +39,6 @@ public class Winner : MonoBehaviour
             gameOverCanvas.SetActive(true);
             gameOverText.text = winner + " ha ganado!";
             Time.timeScale = 0; // Pausar el juego
-            // Opcional: desactivar el juego o mostrar opciones adicionales
         }
     }
 }

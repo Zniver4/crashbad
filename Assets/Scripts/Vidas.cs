@@ -27,7 +27,7 @@ public class Vidas : MonoBehaviour
 
                     if (playerLives <= 0)
                     {
-                        // Manejar el fin del juego para este jugador
+                        // Maneja el fin del juego para este jugador
                         playerLives = 0; // Asegurarse de que no baje de 0
                         HidePlayer();
                     }
